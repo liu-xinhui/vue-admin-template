@@ -8,10 +8,10 @@ var vueEnv = {
   },
   //测试环境
   test: {
-    serverUrl: "/",
+    serverUrl: "http://118.25.44.86:8010/",
   },
   prod: {
-    serverUrl: "/",
+    serverUrl: "http://118.25.44.86:8010/",
   },
 };
 

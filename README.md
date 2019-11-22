@@ -3,7 +3,7 @@
 </h1>
 
 ### 配合使用的服务器端spring boot项目，请移步[spring-boot-template](https://github.com/liunewshine/spring-boot-template.git)
-
+### 项目演示：<a href="http://118.25.44.86:8011" target="_blank">地址</a> 账号密码默认填充（admin，a123456）
 ## 简介
 多个`vue管理系统`开发经验总结而成，集成`element ui`、`axios`等，封装了`网络请求`、`dialog数据重置`、
 `登录`、`正则`、`权限验证`等工具类和全局方法
@@ -70,6 +70,7 @@ template-front
 ```
 # clone或者下载项目
 
+# 修改服务器地址`public/config.js`,可直接连接"http://118.25.44.86:8010/"进行测试
 # 进入项目目录
 cd template-front
 
@@ -111,6 +112,7 @@ npm run build
 ```
 
 ## 建议
+- 服务器地址配置在`public/config.js`
 - 图标采用在线[iconfont](https://www.iconfont.cn/)，请在index.html替换成自己的图标库
 ![index.html](https://uploader.shimo.im/f/TCwF5gfz94gpyvo8.png!thumbnail)
 

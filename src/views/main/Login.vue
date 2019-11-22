@@ -90,7 +90,7 @@
 
   export default {
     data() {
-      const isDev = process.env.NODE_ENV === "development";
+      //const isDev = process.env.NODE_ENV === "development";
       return {
         dialogVisible: false,
         countdownSeconds: 60,
@@ -98,8 +98,10 @@
         sendMsgBtnText: "发送短信",
         sendMsgBtnLoading: false,
         user: {
-          phone: isDev ? "10000000000" : "",
-          password: isDev ? "a123456" : "",
+          //phone: isDev ? "10000000000" : "",
+          phone: "10000000000",
+          //password: isDev ? "a123456" : "",
+          password: "a123456",
         },
         findPassword: {
           phone: "",
