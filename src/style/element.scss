@@ -1,0 +1,149 @@
+@import "variables";
+@import "transition";
+
+$--color-primary: $color-primary;
+$--border-radius-base: 2px;
+$--button-small-border-radius: $--border-radius-base;
+$--msgbox-border-radius: $--border-radius-base;
+$--tag-border-radius: $--border-radius-base;
+$--border-color-base: #e6e6e6;
+$--color-text-placeholder: #c6c6c6;
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+@import "../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+.el-dialog {
+  .el-dialog__header {
+    background-color: #f8f8f8;
+    border-radius: $--border-radius-base;
+    padding: 10px 20px;
+
+    .el-dialog__title {
+      font-size: 15px;
+      user-select: none;
+    }
+
+    .el-dialog__headerbtn {
+      top: 13px;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 25px 35px 20px 35px;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid #f3f3f3;
+    padding: 10px 15px;
+  }
+}
+
+.el-message-box {
+  padding: 0;
+
+  .el-message-box__header {
+    background-color: #f8f8f8;
+    padding: 21px 25px;
+
+    .el-message-box__headerbtn {
+      top: 13px;
+    }
+  }
+
+  .el-message-box__content {
+    padding: 25px;
+  }
+
+  .el-message-box__title {
+    font-size: 15px;
+  }
+
+  .el-message-box__btns {
+    border-top: 1px solid #f3f3f3;
+    padding: 8px 15px;
+  }
+}
+
+.small-padding .el-dialog__body {
+  padding: 5px 25px 20px 25px;
+}
+
+.select-dialog .el-dialog__body {
+  padding: 0 35px 30px 35px;
+}
+
+.el-button + .el-button {
+  margin-left: 5px;
+}
+
+.el-table {
+  color: #444;
+}
+
+.el-table thead {
+  color: #76787f;
+}
+
+.el-table td,
+.el-table th {
+  padding: 7px 0;
+}
+
+.el-table th {
+  background-color: #f4f7fa;
+}
+
+.el-table thead {
+  color: #444;
+}
+
+.el-table__expand-icon > .el-icon {
+  top: 40%
+}
+
+.el-message-box .el-message-box__header {
+  padding: 15px 25px;
+}
+
+.el-form-item__label {
+  font-size: 13px
+}
+
+.el-form-item--mini.el-form-item {
+  margin-bottom: 14px;
+}
+
+.el-table__row {
+  .el-button--mini {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  /*操作列使用此class可以button换行自动添加边距,当button多时使用*/
+  .vm-table_operate {
+    .el-button {
+      margin: 0 3px 3px 0;
+    }
+
+    .cell {
+      align-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: -3px;
+      margin-right: -3px;
+    }
+  }
+}
+
+.el-table__body tr.hover-row > td {
+  background-color: transparent;
+}
+
+.el-input.is-disabled .el-input__inner {
+  color: #999;
+}
+
+.el-select {
+  width: 100%;
+}

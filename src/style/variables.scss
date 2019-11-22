@@ -1,0 +1,13 @@
+$header-height: 45px;
+$sidebar-width: 190px;
+$sidebar-width-close: 64px;
+
+$color-primary: #2D8CF0;
+
+$border-color: #E6E6E6;
+
+@mixin gravityCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
