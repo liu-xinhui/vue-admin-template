@@ -96,6 +96,10 @@ docker build -t template-front:latest .
 #启动docker容器,可使用-e SPRING_PROFILES_ACTIVE=${env}指定环境，不指定则默认为dev
 docker run -itd --name template-front -e env=dev template-front:latest
 ```
+
+#### 使用Intellij idea docker插件部署
+![idea docker](https://uploader.shimo.im/f/Z4LwLkkD3moqaiEr.png)
+
 #### docker+jenkins部署
 参考我的文章
 [最优雅的Docker+Jenkins pipeline部署vue项目，前端项目都可参考](https://juejin.im/post/5d90735a6fb9a04e161b5384)
@@ -110,6 +114,28 @@ npm run build
 
 #将dist目录拷贝至任意web容器即可，tomcat、jetty、nginx、IIS均可
 ```
+
+## 权限实现
+
+#### RBAC基于角色的权限访问控制(Role-Based Access Control)
+取消了`用户`和`权限`的直接关联，改为通过`用户关联角色`、`角色关联权限`的方法来间接地赋予用户权限。
+当新增用户时只需分配已有的角色，大大减少运营人员工作量和出错率。
+
+- 三张表分别为多对多关系
+![权限](https://uploader.shimo.im/f/2zAPUtHpCVUwYEHk.png)
+
+- 生成关联网之后的结构如下 
+![权限](https://uploader.shimo.im/f/BFf7EHNkSsop3kil.png)
+
+- 代码实现,具体参考代码
+![权限](https://uploader.shimo.im/f/eSVZ3KkYdrUwHzCH.png!thumbnail)
+
+![权限](https://uploader.shimo.im/f/xKCoUruZQoAGsN2t.png!thumbnail)
+
+![权限](https://uploader.shimo.im/f/gawmgQJf4lEZD0pN.png!thumbnail)
+
+![权限](https://uploader.shimo.im/f/lD4tay7dNeAnB17u.png!thumbnail)
+
 
 ## 建议
 - 服务器地址配置在`public/config.js`
@@ -126,4 +152,12 @@ npm run build
 ![webpack](https://uploader.shimo.im/f/BhbXr1R7hxYdjyFM.png!thumbnail)
 
 ## 界面截图
-![控制台输入表名](https://uploader.shimo.im/f/GKTKIT2AoTgeqE6M.png!thumbnail)
+![截图](https://uploader.shimo.im/f/veMUj9E9N6Q9LUqK.png)
+
+![截图](https://uploader.shimo.im/f/veMUj9E9N6Q9LUqK.png)
+
+![截图](https://uploader.shimo.im/f/yHzugmhRcbgdSAuw.png)
+
+![截图](https://uploader.shimo.im/f/ZRGaQzk9xAE0VJeO.png)
+
+![截图](https://uploader.shimo.im/f/hUit5SzXXDImYWq4.png)
