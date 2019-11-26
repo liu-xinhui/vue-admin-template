@@ -130,7 +130,7 @@ npm run build
 - 代码实现,具体参考代码
 ![权限](https://uploader.shimo.im/f/eSVZ3KkYdrUwHzCH.png!thumbnail)
 
-![权限](https://uploader.shimo.im/f/xKCoUruZQoAGsN2t.png!thumbnail)
+![权限](https://uploader.shimo.im/f/xKCoUruZQoAGsN2t.png)
 
 ![权限](https://uploader.shimo.im/f/gawmgQJf4lEZD0pN.png!thumbnail)
 
