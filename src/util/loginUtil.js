@@ -30,12 +30,7 @@ export default {
     return this.getUserInfo().userId;
   },
   hasAuth(authName) {
-    try {
-      //admin默认用于所有权限
-      return (this.getUserId() === adminUserId) || (this.getUserInfo().permissions || []).indexOf(authName) > -1;
-    } catch (e) {
-      console.error(e);
-      return false;
-    }
+    //admin默认用于所有权限
+    return (this.getUserId() === adminUserId) || (this.getUserInfo().permissions || []).indexOf(authName) > -1;
   },
 };
