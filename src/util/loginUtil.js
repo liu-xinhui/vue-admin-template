@@ -4,19 +4,18 @@ let userInfo = null;
 export const adminUserId = 1;
 export default {
   login(obj) {
+    userInfo = obj;
     storage.setItem(USER_INFO, JSON.stringify(obj));
   },
   logout() {
+    userInfo = null;
     storage.clear();
   },
   isLogin() {
-    return !!this.getToken();
+    return userInfo && this.getToken();
   },
   getUserInfo() {
-    if (!userInfo) {
-      userInfo = JSON.parse(storage.getItem(USER_INFO));
-    }
-    return userInfo || {};
+    return userInfo || JSON.parse(storage.getItem(USER_INFO)) || {};
   },
   getToken() {
     return this.getUserInfo().token;
@@ -32,13 +31,8 @@ export default {
   },
   hasAuth(authName) {
     try {
-      console.log(authName);
       //admin默认用于所有权限
-      if (this.getUserId() === adminUserId) {
-        return true;
-      }
-      let permissions = this.getUserInfo().permissions;
-      return (permissions || []).indexOf(authName) > -1;
+      return (this.getUserId() === adminUserId) || (this.getUserInfo().permissions || []).indexOf(authName) > -1;
     } catch (e) {
       console.error(e);
       return false;
