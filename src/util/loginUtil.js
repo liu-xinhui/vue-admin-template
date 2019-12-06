@@ -12,7 +12,7 @@ export default {
     storage.clear();
   },
   isLogin() {
-    return userInfo && this.getToken();
+    return !!this.getToken();
   },
   getUserInfo() {
     return userInfo || JSON.parse(storage.getItem(USER_INFO)) || {};
