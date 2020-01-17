@@ -99,8 +99,8 @@
         sendMsgBtnLoading: false,
         user: {
           //phone: isDev ? "10000000000" : "",
-          phone: "10000000000",
           //password: isDev ? "a123456" : "",
+          phone: "10000000000",
           password: "a123456",
         },
         findPassword: {
