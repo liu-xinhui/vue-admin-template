@@ -5,7 +5,7 @@
         placeholder="请选择地区"
         style="width: 100%"
         v-bind="$attrs"
-        v-on="$listeners"/>
+        v-on="$listeners"></el-cascader>
   </div>
 </template>
 

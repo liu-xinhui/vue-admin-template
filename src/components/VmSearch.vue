@@ -4,7 +4,7 @@
     <div :style="labelStyle" class="vm-search-label">
       {{label}}
     </div>
-    <slot/>
+    <slot></slot>
   </div>
 </template>
 

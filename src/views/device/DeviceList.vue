@@ -8,24 +8,24 @@
       <template slot="adSearch">
         <div class="vm-search">
           <vm-search label="编号">
-            <el-input v-model.trim="filter.no" clearable/>
+            <el-input v-model.trim="filter.no" clearable></el-input>
           </vm-search>
           <vm-search label="名称">
-            <el-input v-model.trim="filter.name" clearable/>
+            <el-input v-model.trim="filter.name" clearable></el-input>
           </vm-search>
           <vm-search label="型号">
-            <el-input v-model.trim="filter.model" clearable/>
+            <el-input v-model.trim="filter.model" clearable></el-input>
           </vm-search>
         </div>
       </template>
-      <el-table-column align="center" label="编号" prop="no"/>
-      <el-table-column label="名称" prop="name"/>
+      <el-table-column align="center" label="编号" prop="no"></el-table-column>
+      <el-table-column label="名称" prop="name"></el-table-column>
       <el-table-column label="型号" prop="model">
         <template slot-scope="scope">
           {{constant.deviceType.$object[scope.row.model]}}
         </template>
       </el-table-column>
-      <el-table-column label="维保工" prop="maintUserName"/>
+      <el-table-column label="维保工" prop="maintUserName"></el-table-column>
       <el-table-column
           v-if="hasAuth"
           align="center"
@@ -38,7 +38,7 @@
         </template>
       </el-table-column>
     </vm-table>
-    <edit-page ref="editPage" @save-success="getList(-1)"/>
+    <edit-page ref="editPage" @save-success="getList(-1)"></edit-page>
   </div>
 </template>
 <script>

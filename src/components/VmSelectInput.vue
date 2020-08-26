@@ -8,7 +8,7 @@
       @change="change"
       @clear="clear">
     <div slot="append" class="iconWrapper" @click="onSelect">
-      <i class="el-icon-search"/>
+      <i class="el-icon-search"></i>
     </div>
   </el-input>
 </template>

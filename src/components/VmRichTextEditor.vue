@@ -1,7 +1,7 @@
 <template>
   <div class="vm-editor-wrapper">
-    <div id="toolbar" class="vm-editor-toolbar"/>
-    <div id="editor" :style="{height:height}" class="vm-editor-editor"/>
+    <div id="toolbar" class="vm-editor-toolbar"></div>
+    <div id="editor" :style="{height:height}" class="vm-editor-editor"></div>
   </div>
 </template>
 

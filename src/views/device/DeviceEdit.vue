@@ -15,10 +15,10 @@
         class="form"
         label-width="60px">
       <el-form-item label="编号" prop="no">
-        <el-input v-model="model.no" placeholder="请输入"/>
+        <el-input v-model="model.no" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item label="名称" prop="name">
-        <el-input v-model="model.name" placeholder="请输入"/>
+        <el-input v-model="model.name" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item label="型号" prop="model">
         <el-select v-model="model.model" placeholder="请选择" clearable>
@@ -26,7 +26,7 @@
               v-for="item in constant.deviceType.$options"
               :key="item.value"
               :label="item.label"
-              :value="item.value"/>
+              :value="item.value"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="维保工" prop="maintUserName">
@@ -34,14 +34,14 @@
             :value="model.maintUserName"
             clearable
             @select="$refs.maintWorkerSelect.open()"
-            @clear="onMaintWorkerClear"/>
+            @clear="onMaintWorkerClear"></vm-select-input>
       </el-form-item>
     </el-form>
     <span slot="footer">
       <el-button @click="dialogVisible=false">取消</el-button>
       <el-button :loading="submitLoading" type="primary" @click="handleSubmit">保存</el-button>
     </span>
-    <user-select ref="maintWorkerSelect" @select="onMaintWorkerSelect"/>
+    <user-select ref="maintWorkerSelect" @select="onMaintWorkerSelect"></user-select>
   </el-dialog>
 </template>
 

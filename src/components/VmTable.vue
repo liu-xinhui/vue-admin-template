@@ -4,14 +4,14 @@
     <div
         v-if="$slots.toolbar"
         class="tools-bar">
-      <slot name="toolbar"/>
+      <slot name="toolbar"></slot>
     </div>
     <div
         v-if="$slots.adSearch"
         ref="adSearch"
         class="ad-search">
       <div id="search" class="ad-search_content">
-        <slot name="adSearch"/>
+        <slot name="adSearch"></slot>
         <div class="ad-search-btn">
           <el-button
               v-if="!hideClear"
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <slot name="otherButton"/>
+    <slot name="otherButton"></slot>
     <div class="wrapper">
       <el-table
           ref="elTable"
@@ -47,18 +47,18 @@
         <el-table-column
             v-if="multiSelection"
             type="selection"
-            width="55"/>
+            width="55"></el-table-column>
         <template slot="empty">
-          <i v-if="status==='loading'" class="el-icon-loading" style="font-size: 18px"/>
+          <i v-if="status==='loading'" class="el-icon-loading" style="font-size: 18px"></i>
           <el-button v-else-if="status==='error'" @click="handleSearchClick">加载失败，点击重新获取</el-button>
           <div v-else-if="status==='empty'">暂无数据</div>
         </template>
         <el-table-column v-if="showRadio" align="center" width="50">
           <template slot-scope="scope">
-            <el-checkbox :value="scope.$index===currentRowIndex" @change="onCheckedChange($event,scope.$index)"/>
+            <el-checkbox :value="scope.$index===currentRowIndex" @change="onCheckedChange($event,scope.$index)"></el-checkbox>
           </template>
         </el-table-column>
-        <slot/>
+        <slot></slot>
       </el-table>
       <div style="margin-top: 16px;overflow: hidden">
         <el-pagination
@@ -67,7 +67,7 @@
             :page-size="pageSize"
             class="page"
             layout="total, prev, pager, next, jumper"
-            @current-change="handleCurrentChange"/>
+            @current-change="handleCurrentChange"></el-pagination>
       </div>
     </div>
   </div>

@@ -2,16 +2,16 @@
   <div class="vm-main">
     <sidebar
         :sidebar-collapsed="sidebarCollapsed"
-        class="vm-main-sidebar"/>
+        class="vm-main-sidebar"></sidebar>
     <head-bar
         :class="{'vm-header-collapsed':sidebarCollapsed}"
         class="vm-main-header"
-        @toggle-sidebar="toggleSidebar"/>
+        @toggle-sidebar="toggleSidebar"></head-bar>
     <div
         :class="{'vm-main-collapsed':sidebarCollapsed}"
         class="vm-main-page">
       <div class="vm-content">
-        <router-view class="vm-page"/>
+        <router-view class="vm-page"></router-view>
       </div>
     </div>
   </div>

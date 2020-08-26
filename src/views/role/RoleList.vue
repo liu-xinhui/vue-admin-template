@@ -4,13 +4,13 @@
         ref="vmTable"
         url="roles">
       <el-button slot="toolbar" size="mini" type="primary" @click="$refs.editPage.open(0)">新增</el-button>
-      <el-table-column align="center" type="index" width="50"/>
-      <el-table-column label="角色名称" prop="name"/>
-      <el-table-column label="备注" prop="note"/>
-      <el-table-column label="创建人" prop="createBy"/>
-      <el-table-column label="创建时间" prop="createTime"/>
-      <el-table-column label="最后修改人" prop="updateBy"/>
-      <el-table-column label="最后修改时间" prop="updateTime"/>
+      <el-table-column align="center" type="index" width="50"></el-table-column>
+      <el-table-column label="角色名称" prop="name"></el-table-column>
+      <el-table-column label="备注" prop="note"></el-table-column>
+      <el-table-column label="创建人" prop="createBy"></el-table-column>
+      <el-table-column label="创建时间" prop="createTime"></el-table-column>
+      <el-table-column label="最后修改人" prop="updateBy"></el-table-column>
+      <el-table-column label="最后修改时间" prop="updateTime"></el-table-column>
       <el-table-column v-if="hasAuth" align="center" label="操作" width="120">
         <template slot-scope="scope">
           <el-button type="primary" @click="$refs.editPage.open(scope.row.id)">编辑</el-button>
@@ -18,7 +18,7 @@
         </template>
       </el-table-column>
     </vm-table>
-    <edit-page ref="editPage" @save-success="getList"/>
+    <edit-page ref="editPage" @save-success="getList"></edit-page>
   </div>
 </template>
 <script>

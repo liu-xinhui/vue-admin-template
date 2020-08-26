@@ -32,7 +32,7 @@
               placement="top-start"
               style="float: right;margin-right: 5px"
               trigger="hover">
-            <img src="/img/appQRCode.png" width="200px">
+            <img src="/img/appQRCode.png" width="200px"/>
             <el-button slot="reference" size="small" @click="gotoDownloadApp">下载APP</el-button>
           </el-popover>
         </div>

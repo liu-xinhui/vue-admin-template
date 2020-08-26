@@ -16,13 +16,13 @@
         class="form"
         label-width="80px">
       <el-form-item label="手机号" prop="phone">
-        <el-input v-model="model.phone" placeholder="请输入"/>
+        <el-input v-model="model.phone" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item label="姓名" prop="name">
-        <el-input v-model="model.name" placeholder="请输入"/>
+        <el-input v-model="model.name" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item v-if="model.id === 0" label="密码" prop="password">
-        <el-input v-model="model.password" placeholder="请输入" type="password"/>
+        <el-input v-model="model.password" placeholder="请输入" type="password"></el-input>
       </el-form-item>
       <el-form-item label="用户角色" prop="type">
         <el-select
@@ -34,7 +34,7 @@
               v-for="item in roles"
               :key="item.id"
               :label="item.name"
-              :value="item.id"/>
+              :value="item.id"></el-option>
         </el-select>
       </el-form-item>
     </el-form>

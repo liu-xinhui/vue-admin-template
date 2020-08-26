@@ -15,10 +15,10 @@
         class="form"
         label-width="75px">
       <el-form-item label="部门名称" prop="name">
-        <el-input v-model="model.name" placeholder="请输入"/>
+        <el-input v-model="model.name" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item label="电话" prop="phone">
-        <el-input v-model="model.phone" placeholder="请输入"/>
+        <el-input v-model="model.phone" placeholder="请输入"></el-input>
       </el-form-item>
     </el-form>
     <span slot="footer">

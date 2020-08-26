@@ -15,10 +15,10 @@
         class="form"
         label-width="80px">
       <el-form-item label="角色名称" prop="name">
-        <el-input v-model="role.name" placeholder="请输入"/>
+        <el-input v-model="role.name" placeholder="请输入"></el-input>
       </el-form-item>
       <el-form-item label="备注" prop="note">
-        <el-input v-model="role.note" placeholder="请输入" type="textarea"/>
+        <el-input v-model="role.note" placeholder="请输入" type="textarea"></el-input>
       </el-form-item>
     </el-form>
     <div v-loading="contentLoading" class="permission">

@@ -14,18 +14,18 @@
       <template slot="adSearch">
         <div class="vm-search">
           <vm-search label="手机号">
-            <el-input v-model.trim="filter.phone" clearable/>
+            <el-input v-model.trim="filter.phone" clearable></el-input>
           </vm-search>
           <vm-search label="姓名">
-            <el-input v-model.trim="filter.name" clearable/>
+            <el-input v-model.trim="filter.name" clearable></el-input>
           </vm-search>
         </div>
       </template>
-      <el-table-column align="center" type="index" width="50"/>
-      <el-table-column align="center" label="手机号" prop="phone"/>
-      <el-table-column label="姓名" prop="name"/>
-      <el-table-column label="最后修改人" prop="updateBy"/>
-      <el-table-column label="最后修改时间" prop="updateTime"/>
+      <el-table-column align="center" type="index" width="50"></el-table-column>
+      <el-table-column align="center" label="手机号" prop="phone"></el-table-column>
+      <el-table-column label="姓名" prop="name"></el-table-column>
+      <el-table-column label="最后修改人" prop="updateBy"></el-table-column>
+      <el-table-column label="最后修改时间" prop="updateTime"></el-table-column>
       <el-table-column align="center" label="操作" width="70">
         <template slot-scope="scope">
           <el-button plain type="primary" @click="onSelect(scope.row)">选择</el-button>

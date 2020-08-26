@@ -3,8 +3,8 @@
     <el-scrollbar style="height: 100%" wrap-class="scrollbar">
       <div class="logo">
         <router-link to="/">
-          <img v-if="!sidebarCollapsed" class="large" src="/img/logo_large.jpg">
-          <img v-else class="small" src="/img/logo_small.jpg">
+          <img v-if="!sidebarCollapsed" class="large" src="/img/logo_large.jpg"/>
+          <img v-else class="small" src="/img/logo_small.jpg"/>
         </router-link>
       </div>
       <transition>
@@ -23,7 +23,7 @@
                 <i
                     :class="[sidebarCollapsed?'icon-lg':sidebarCollapsed,menu.meta.icon]"
                     class="iconfont"
-                    style="padding-right: 5px"/>
+                    style="padding-right: 5px"></i>
                 <span>{{menu.meta.title}}</span>
               </template>
               <el-menu-item
@@ -31,7 +31,7 @@
                   :key="childIndex"
                   :index="child.path"
                   @click="goto(child)">
-                <i class="iconfont circle"/>
+                <i class="iconfont circle"></i>
                 {{child.meta.title}}
               </el-menu-item>
             </el-submenu>
